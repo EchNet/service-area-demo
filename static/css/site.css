@@ -1,0 +1,114 @@
+html, body, div, section, header, footer, ul, li {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 18px;
+  line-height: 1.30;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  background-color: white;
+  color: #666;
+}
+input {
+  font-family: inherit;
+  font-size: inherit;
+  color: #888;
+}
+header {
+  display: flex;
+  background-color: #ffa;
+  justify-content: center;
+  padding: 5px;
+}
+header > span {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+section {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+div.doggone {
+  background: url(/img/matt-nelson-aI3EBLvcyu4-unsplash.jpg) no-repeat;
+  background-size: cover;
+  height: 400px;
+  color: white;
+  position: relative;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 10px;
+  border-top: solid 3px #df8;
+}
+div.box {
+  width: 240px;
+  padding: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  box-shadow: 0 0 12px 4px #fd8;
+  border-radius: 12px;
+}
+a[href] {
+  font-family: Sarabun, Arial, sans-serif;
+  color: #4ac;
+  cursor: pointer;
+  text-decoration: underline;
+}
+a[href]:hover {
+  color: #9cd;
+}
+h1 {
+  color: #ff0;
+  font-weight: 600;
+  font-size: 48px;
+  position: absolute;
+  top: 25px;
+}
+button {
+  padding: 8px 18px;
+  background-color: #4ac;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+div.doggone section:nth-child(2) {
+  position: absolute;
+  width: 100%;
+  bottom: 35px;
+}
+button:hover {
+  background-color: #9cd;
+  box-shadow: 0 0 12px 4px white;
+}
+h2 {
+  margin-top: 20px;
+  color: #4ac;
+  font-weight: 400;
+  font-size: 32px;
+}
+h3 {
+  color: #4ac;
+  font-weight: 400;
+  font-size: 22px;
+}
+.form-field {
+  margin: 20px;
+}
+input[type='text'] {
+  width: 300px;
+}
+hr {
+  border-top: solid 3px #df8;
+}
+.right {
+  text-align: right;
+}
+small {
+  font-size: 12px;
+}
