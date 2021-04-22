@@ -16,9 +16,6 @@ const server = express()
   .use(express.static("./static"))
   .use(express.urlencoded({ extended: true }))
   .get("/", (req, res) => {
-    res.redirect("/index.html")
-  })
-  .get("/index.html", (req, res) => {
     var context = { footer: footerContent };
     res.render("index", context);
   })
