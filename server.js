@@ -31,4 +31,10 @@ const server = express()
     footerContent = req.body.footer;
     res.redirect("/cms.html")
   })
+  .get("/log", (req, res) => {
+    res.json("logged")
+  })
+  .post("/log", (req, res) => {
+    res.json("logged")
+  })
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
