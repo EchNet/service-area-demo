@@ -26,9 +26,8 @@ header > span {
   margin-right: 20px;
 }
 section {
-  display: flex;
-  justify-content: center;
   padding: 10px;
+  text-align: center;
 }
 div.doggone {
   background: url(/img/matt-nelson-aI3EBLvcyu4-unsplash.jpg) no-repeat;
