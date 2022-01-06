@@ -23,6 +23,14 @@ const server = express()
     var context = { footer: footerContent };
     res.render("service-form", context);
   })
+  .get("/service-form-north.html", (req, res) => {
+    var context = { footer: footerContent };
+    res.render("service-form-north", context);
+  })
+  .get("/service-form-south.html", (req, res) => {
+    var context = { footer: footerContent };
+    res.render("service-form-south", context);
+  })
   .get("/cms.html", (req, res) => {
     var context = { footer: footerContent };
     res.render("cms", context);
