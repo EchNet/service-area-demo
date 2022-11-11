@@ -26,6 +26,7 @@ header > span {
   margin-right: 20px;
 }
 section {
+  display: flex;
   padding: 10px;
   text-align: center;
 }
