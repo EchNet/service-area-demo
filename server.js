@@ -22,6 +22,10 @@ const server = express()
     var context = { footer: footerContent };
     res.render("index", context);
   })
+  .get("/black", (req, res) => {
+    var context = { footer: footerContent, black: true };
+    res.render("index", context);
+  })
   .get("/service-form.html", (req, res) => {
     var context = { footer: footerContent };
     res.render("service-form", context);

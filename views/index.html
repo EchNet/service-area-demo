@@ -9,39 +9,35 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" href="img/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-    <link rel="manifest" href="img/site.webmanifest">
-    <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sarabun">
     <link rel="stylesheet" href="/css/site.css">
   </head>
   <body>
-    <header>
-      <span>Call: (781) 555-0450</span>
-      <span>Open daily 8am - 8pm</span>
+    <header style="display:flex; justify-content: space-around; align-items: center">
+      {{#black}}
+        <span>Not whitelisted</span> <a href="/">Test whitelisted</a>
+      {{/black}}
+      {{^black}}
+        <span>Whitelisted</span> <a href="/black">Test non-whitelisted</a>
+      {{/black}}
     </header>
-    <section>
+    <section style="display:flex; justify-content: space-between; align-items: center">
       <img class="small-logo" src="/img/logo.png"/>
+      <span style="font-size: 18px">Call: (781) 555-0450</span>
+      <span style="font-size: 18px">Open daily 8am - 8pm</span>
     </section>
-    <div class="doggone">
-      <section>
-        <h1>Pet sitting & dog walking</h1>
-      </section>
-      <section>
-        <a href="/service-form.html"><button>Schedule Now</button></a>
-      </section>
-    </div>
+    <section class="doggone">
+      <a href="/service-form.html"><button>Schedule Now</button></a>
+    </section>
     <div class="right">
       <small>Photo by <a href="https://unsplash.com/@mnelson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Matt Nelson</a> on <a href="https://unsplash.com/collections/1926643/dogs-walking-on-leash?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></small>
     </div>
     <section>
       <h2>Trusted pet services</h2>
     </section>
-    <section>
+    <section id="msa-hover-section">
       <div class="box">
         <img class="srv-icon" src="/img/dog-walking.png"/>
         <h3>Dog Walking</h3>
@@ -64,6 +60,16 @@
     <footer>
       {{{ footer }}}
     </footer>
-    <div style="position:fixed; left:0; bottom:0; background-color: #cb0; padding: 4px;"><a href="/cms.html">CMS</a></div>
+    <div style="position:fixed; left:0; bottom:0; background-color: #cb0; padding: 8px;">
+      <a href="/cms.html">Edit Page Footer</a>
+      ~
+      <a id="clear-state-link" href="#">Clear MSA State</a>
+    </div>
   </body>
+  <script type="text/javascript">
+    document.getElementById("clear-state-link").addEventListener("click", function(e) {
+      e.preventDefault();
+      localStorage.removeItem("MyServiceArea");
+    }, false);
+  </script>
 </html>
