@@ -7,11 +7,6 @@ PIP=pip
 PYTHON=python
 NPM=npm
 
-default: deploy
-
-deploy:
-	aws s3 --profile echnet sync ./static s3://ech.net --exclude .DS_Store
-
 package-lock.json: package.json
 	$(NPM) install
 
