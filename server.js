@@ -7,7 +7,7 @@ const INDEX = '/index.html';
 
 var footerContent = "" +
   "<span>This is the footer</span>" +
-  '<script type="text/javascript" src="https://myservicearea-staging.herokuapp.com/code/ujSjDzzrJkJLZ7xK.js"></script>';
+  '<script type="text/javascript" async src="https://myservicearea-staging.herokuapp.com/code/ujSjDzzrJkJLZ7xK.js"></script>';
 
 
 const server = express()
